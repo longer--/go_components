@@ -6,6 +6,10 @@ func (self Location) String() string {
 	return fmt.Sprintf("(%f, %f, %f)", self.X, self.Y, self.Z)
 }
 
+func (self Character) String() string {
+	return fmt.Sprintf("%s %s", self.Name, self.Location)
+}
+
 func (self Location) euclideanDistance(target Location) float64 {
 	deltaX := self.X - target.X
 	deltaY := self.Y - target.Y
